@@ -10,7 +10,7 @@ const HeaderContainer = styled.header`
   background-image: url(${HeaderBg});
   background-size: cover;
   background-position: 0% 70%;
-  height: 100vh;
+  height: 85vh;
   width: 100%;
   position: relative;
 `
@@ -18,16 +18,26 @@ const HeaderContainer = styled.header`
 const HeaderInfo = styled.div`
   width: 100%;
   display: flex;
-  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 8px;
   padding: 0 400px;
 
   h1 {
-    background-color: rgba(19, 42, 19, 0.7);
+    background-color: rgba(19, 42, 19, 0.9);
     padding: 4px 16px;
     border-radius: 4px;
     font-size: 40px;
     font-weight: 500;
   }
+  h2 {
+    background-color: rgba(49, 87, 44, 0.9);
+    padding: 4px 16px;
+    font-weight: 400;
+    border-radius: 4px;
+    font-size: 40px;
+  }
+
 `
 
 const Header = () => {
@@ -35,7 +45,8 @@ const Header = () => {
     <HeaderContainer>
       <Nav />
       <HeaderInfo>
-        <h1>Complejo de cabañas y quinchos</h1>
+        <h1>Tierra de todos</h1>
+        <h2>Complejo de cabañas y quinchos</h2>
       </HeaderInfo>
     </HeaderContainer>
   )

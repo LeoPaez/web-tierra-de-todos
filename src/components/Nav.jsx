@@ -26,7 +26,7 @@ const NavLinks = styled.div`
 
   a {
     text-transform: uppercase;
-    padding-bottom: 6px;
+    padding: 6px 0;
   }
 
   a:hover {
