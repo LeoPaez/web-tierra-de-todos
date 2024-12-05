@@ -6,6 +6,7 @@ import Nav from "./components/Nav"
 import Home from "./pages/Home"
 import Cabañas from "./pages/Cabañas"
 import Quinchos from "./pages/Quinchos"
+import ScrollToTop from "./utils/ScrollToTop"
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       </Routes>
       <WhatsappLink />
       <Footer />
+      <ScrollToTop />
     </>
   )
 }
