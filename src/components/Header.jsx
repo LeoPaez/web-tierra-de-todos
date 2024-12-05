@@ -1,7 +1,5 @@
 import styled from "styled-components"
-
 import HeaderBg from "../assets/header-bg.jpg"
-import Nav from "./Nav"
 
 const HeaderContainer = styled.header`
   display: flex;
@@ -24,14 +22,14 @@ const HeaderInfo = styled.div`
   padding: 0 400px;
 
   h1 {
-    background-color: rgba(19, 42, 19, 0.9);
+    background-color: rgba(19, 42, 19, 0.8);
     padding: 4px 16px;
     border-radius: 4px;
     font-size: 40px;
     font-weight: 500;
   }
   h2 {
-    background-color: rgba(49, 87, 44, 0.9);
+    background-color: rgba(49, 87, 44, 0.8);
     padding: 4px 16px;
     font-weight: 400;
     border-radius: 4px;
@@ -43,7 +41,6 @@ const HeaderInfo = styled.div`
 const Header = () => {
   return (
     <HeaderContainer>
-      <Nav />
       <HeaderInfo>
         <h1>Tierra de todos</h1>
         <h2>Complejo de cabañas y quinchos</h2>

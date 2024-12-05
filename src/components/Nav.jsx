@@ -12,6 +12,8 @@ const NavContainer = styled.nav`
   position: absolute;
   top: 0;
   box-sizing: border-box;
+  z-index: 1;
+
   img {
     height: 80px;
   }
