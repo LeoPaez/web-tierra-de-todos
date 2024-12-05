@@ -2,6 +2,7 @@ import styled from "styled-components"
 
 import CabañaBg from "../assets/cabañas-bg.jpg"
 import QuinchosBg from "../assets/quincho-bg.jpg"
+import { Link } from "react-router"
 
 const ServicesCont = styled.div`
   display: flex;
@@ -47,21 +48,19 @@ const ServiceInfo = styled.div`
   p {
     text-align: center;
   }
+`
 
-  button {
-    font-size: 16px;
-    padding: 8px 20px;
-    font-weight: 300;
-    text-transform: uppercase;
-    border: none;
-    border-radius: 4px;
-    margin-top: 10px;
-    background-color: rgba(49, 87, 44, 1);
-    color: #FFF;
-    cursor: pointer;
-  }
+const ServiceButton = styled(Link)`
+  font-size: 18px;
+  padding: 8px 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  border-radius: 4px;
+  margin-top: 10px;
+  background-color: rgba(49, 87, 44, 1);
+  color: #FFF;
 
-  button:hover {
+  &:hover {
     background-color: rgba(49, 87, 44, 0.9);
   }
 `
@@ -74,7 +73,7 @@ const Services = () => {
         <ServiceInfo>
           <h3>Cabañas</h3>
           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. At magnam delectus expedita tenetur sed quibusdam. Ut perspiciatis nesciunt tempora dolorum voluptatibus.</p>
-          <button>Ver las cabañas</button>
+          <ServiceButton to="/cabañas">Ver las cabañas</ServiceButton>
         </ServiceInfo>
       </Service>
       <Service>
@@ -82,7 +81,7 @@ const Services = () => {
         <ServiceInfo>
           <h3>Quinchos</h3>
           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. At magnam delectus expedita tenetur sed quibusdam. Ut perspiciatis nesciunt tempora dolorum voluptatibus.</p>
-          <button>Ver los quinchos</button>
+          <ServiceButton to="/quinchos">Ver los quinchos</ServiceButton>
         </ServiceInfo>
       </Service>
     </ServicesCont>
