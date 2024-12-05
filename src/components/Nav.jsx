@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import TdtLogo from "../assets/tierra_de_todos.png"
+import { Link } from "react-router"
 
 const NavContainer = styled.nav`
   display: flex;
@@ -41,7 +42,9 @@ const NavLinks = styled.div`
 const Nav = () => {
   return (
     <NavContainer>
-      <img src={TdtLogo} alt="Tierra de todos logo" />
+      <Link to="/">
+        <img src={TdtLogo} alt="Tierra de todos logo" />
+      </Link>
       <NavLinks>
         <a href="#">Cabañas</a>
         <a href="#">Quinchos</a>
