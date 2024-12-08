@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import CabañasHeaderBg from "../assets/cabañas-header.jpg"
 import CabañaBg from "../assets/cabañas-bg.jpg"
+import { Link } from "react-router"
 
 const CabañasHeader = styled.div`
   background-image: url(${CabañasHeaderBg});
@@ -25,16 +26,19 @@ const CabañasContainer = styled.div`
   justify-content: center;
   align-items: center;
   gap: 20px;
+  margin: 60px 0;
 `
 
 const CabañaCard = styled.div`
   position: relative;
-  width: 400px;
-  height: 300px;
+  width: 300px;
+  height: 200px;
   background-image: url(${props => props.cardImage});
   display: flex;
-  align-items: flex-end;
+  justify-content: center;
   background-size: cover;
+  border-radius: 4px;
+  transition: all 1s ease-out;
 
   &::before {
     content: "";
@@ -45,20 +49,43 @@ const CabañaCard = styled.div`
     height: 70%;
     background: rgb(0,0,0);
     background: linear-gradient(0deg, rgba(0,0,0,0.9) 0%, rgba(255,255,255,0) 100%);
-    opacity: 1; /* Ajusta la opacidad */
-    z-index: 1; /* Se asegura de estar encima del fondo */
+    z-index: 1;
+    transition: all 0.3s ease-out;
   }
 
   > * {
     position: relative;
-    z-index: 2; /* Asegura que el contenido esté encima de la capa negra */
-    color: white; /* Para contraste si el texto es blanco */
-  }  
+    z-index: 2;
+    color: white;
+  }
 
   p {
-    font-size: 24px;
+    font-size: 22px;
     margin: 0 0 20px 20px;
     font-weight: 500;
+    align-content: flex-end;
+    margin-right: auto;
+  }
+
+  span {
+    position: absolute;
+    background-color: rgba(49, 87, 44, 0.8);
+    padding: 6px 14px;
+    align-self: center;
+    font-weight: 500;
+    border-radius: 6px;
+    display: none;
+    transition: all 1s ease-out;
+  }
+
+  &:hover {
+    &::before {
+      height: 100%;
+    }
+
+    span {
+      display: block;
+    }
   }
 `
 
@@ -69,9 +96,30 @@ const Cabañas = () => {
         <h2>Cabañas</h2> 
       </CabañasHeader>
       <CabañasContainer>
-        <CabañaCard cardImage={CabañaBg}>
-          <p>Cabaña 1</p>  
-        </CabañaCard>
+        <Link to="#">
+          <CabañaCard cardImage={CabañaBg}>
+            <p>Cabaña 1</p>
+            <span>Más informacion {">"}</span>
+          </CabañaCard>
+        </Link>
+        <Link to="#">
+          <CabañaCard cardImage={CabañaBg}>
+            <p>Cabaña 2</p>
+            <span>Más informacion {">"}</span>
+          </CabañaCard>
+        </Link>
+        <Link to="#">
+          <CabañaCard cardImage={CabañaBg}>
+            <p>Cabaña 3</p>
+            <span>Más informacion {">"}</span>
+          </CabañaCard>
+        </Link>
+        <Link to="#">
+          <CabañaCard cardImage={CabañaBg}>
+            <p>Cabaña 4</p>
+            <span>Más informacion {">"}</span>
+          </CabañaCard>
+        </Link>
       </CabañasContainer>
     </>
   )
