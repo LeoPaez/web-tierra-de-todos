@@ -27,12 +27,12 @@ const NavLinks = styled.div`
   gap: 30px;
   border-bottom: 1px solid transparent;
 
-  a {
+  p {
     text-transform: uppercase;
     padding: 6px 0;
   }
 
-  a:hover {
+  p:hover {
     border-bottom: 1px solid #FFF;
   }
 `
@@ -46,10 +46,18 @@ const Nav = () => {
         <img src={TdtLogo} alt="Tierra de todos logo" />
       </Link>
       <NavLinks>
-        <a href="#">Cabañas</a>
-        <a href="#">Quinchos</a>
-        <a href="#">Ubicación</a>
-        <a href="#">Contacto</a>
+        <Link to="/cabañas">
+          <p>Cabañas</p>
+        </Link>
+        <Link to="/quinchos">
+          <p>Quinchos</p>
+        </Link>
+        <Link to="#">
+          <p>Ubicación</p>
+        </Link>
+        <Link to="#">
+          <p>Contacto</p>
+        </Link>
       </NavLinks>
     </NavContainer>
   )
